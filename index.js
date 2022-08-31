@@ -6,57 +6,6 @@ prefix: "s",
 intents: ["GUILDS", "GUILD_MESSAGES"]
 })
 
-let utils = {
-round: function(num) {
-result = Math.round(num)
-return result
-},
-multi: function(num,num2) {
-result = Math.floor(num * num2)
-return result
-},
-substract: function(num,num2) {
-result = Math.floor(num - num2)
-return result
-},
-table: function(title,desc) {
-table = console.table([
-{ title: title, description: desc }
-])
-return table
-},
-random: function(min,max) {
-randomizedNums = Math.floor(Math.random() * min)+max
-return randomizedNums
-},
-randomString: function(length) {
-var result = '';
-var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-var charactersLength = characters.length;
-for ( var i = 0; i < length; i++ ) {
-result += characters.charAt(Math.floor(Math.random() * charactersLength));
-}
-return result;
-},
-randomNumber: function(length) {
-var result = '';
-var nums = '0123456789';
-var numsLength = nums.length;
-for ( var i = 0; i < length; i++ ) {
-result += nums.charAt(Math.floor(Math.random() * numsLength));
-}
-return result;
-},
-numberSeparator: function(num,sep) {
-return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep)
-},
-randomColor: function() {
-let x = Math.floor(Math.random()*0xFFFFFF).toString(16);
-return x
-}
-};
-//simple utility tools made by nwn
-
 bot.command({
     name:"eval",
     code:`
