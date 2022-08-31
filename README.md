@@ -10,7 +10,7 @@ An advanced economy Discord bot using the aoi.js library. Grow your own business
 - Install `express` if you are using Replit to host this bot.
 - And `discord.js` if needed.
 ### Recommended node modules
-- nodemon `npm i nodemon`
+- nodemon `npm i nodemon`, this module will allow you to automatically restart your server when there are files that have changed. You can check the npm pages [here](https://www.npmjs.com/package/nodemon)
 ## Clone this repo
 ```git
 git clone https://github.com/nwndev/sandwich-bot.git
