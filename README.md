@@ -7,6 +7,7 @@ An advanced economy Discord bot using the aoi.js library. Grow your own business
 - Please note that this bot is not 100% complete, you can contribute to this repo or you can download as zip this bot's file and edit it yourself.
 ## Node modules
 - We will use `aoi.js` since it easy to use.
+- Install `express` if you are using Replit to host this bot.
 - And `discord.js` if needed.
 ### Recommended node modules
 - nodemon `npm i nodemon`
@@ -16,6 +17,9 @@ git clone https://github.com/nwndev/sandwich-bot.git
 ```
 # Node modules installation
 ```terminal
+npm init -y
+
 npm i discord.js@latest
 npm i aoi.js@latest
+npm i express@latest
 ```
