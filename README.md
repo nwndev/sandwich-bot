@@ -16,6 +16,7 @@ An advanced economy Discord bot using the aoi.js library. Grow your own business
 git clone https://github.com/nwndev/sandwich-bot.git
 ```
 # Node modules installation
+Require the latest version of Node.js to install these modules.
 ```terminal
 npm init -y
 
