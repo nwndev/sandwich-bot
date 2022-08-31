@@ -2,8 +2,8 @@ const aoijs = require("aoi.js")
 const {token} = require("./config.json")
 const bot = new aoijs.Bot({
 token: token,
-prefix: "s",
-intents: ["GUILDS", "GUILD_MESSAGES"]
+prefix: "s", //prefix for eval
+intents: ["GUILDS", "GUILD_MESSAGES"] //bot's intent.
 })
 
 bot.command({
@@ -12,7 +12,7 @@ bot.command({
 $eval[$message]
 $onlyForIDs[$botOwnerID;]
 `
-    })
+    }) //eval command
 
 bot.command({
     name:"reload",
@@ -23,7 +23,7 @@ $color[2f3136]
 
 $onlyForIDs[$botOwnerID;]
 `
-})
+}) //reload command, will update all commands at /commands directory without restarting the server.
 
 bot.status({
   text: "Sandwich growth! 🥪",
@@ -37,15 +37,15 @@ bot.status({
   time: 12
 })
 
-bot.variables(require(`./var.js`))
+bot.variables(require(`./var.js`)) //variable handler
 
 bot.onMessage()
-bot.onInteractionCreate()
+bot.onInteractionCreate() //create an interaction, require to create and respond to interaction command such as slash command and buttons.
 
 bot.readyCommand({
     channel: "",
     code: `$log[Ready on $userTag[$clientID] | $getVar[invite]]`
-})
+}) //ready command
 
 const loader = new aoijs.LoadCommands(bot);
-loader.load(bot.cmd,'./commands/') 
+loader.load(bot.cmd,'./commands/') //command handler
