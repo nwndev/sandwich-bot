@@ -1,5 +1,5 @@
 # Sandwich 🥪
-An advanced economy Discord bot using the aoi.js library. Grow your own business, sell & make a sandwich then sell it for some coin!
+An advanced economy Discord bot using the aoi.js library. Grow your own business, make a sandwich then sell it for some coin!
 ## Information
 - Place your bot's token at `config.json`.
 - Discord's message content intent will enforced at **August 31, 2022**, because that we will only using the Discord Slash commands.
@@ -24,3 +24,9 @@ npm i discord.js@latest
 npm i aoi.js@latest
 npm i express@latest
 ```
+# Creating the Slash Command
+You can execute these code to register the slash command, I recommend you that you can execute the code in eval command for more easier.
+```js
+$createApplicationCommand[guild;COMMAND_NAME;COMMAND_DESCRIPTION;true;slash]
+```
+Change the `guild` parameter to `global` if you want the slash command show globally. Or you can change it to your testing server id for testing purposes.
